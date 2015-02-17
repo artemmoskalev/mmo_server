@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" 
+    xmlns="http://java.sun.com/xml/ns/persistence" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+    					http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="server" transaction-type="RESOURCE_LOCAL">	
+	    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>    
+		<class>blood.steel.server.authentication.Player</class>
+		<class>blood.steel.server.model.character.Hero</class>
+		<class>blood.steel.server.model.character.Elf</class>
+		<class>blood.steel.server.model.character.Undead</class>
+		<class>blood.steel.server.model.character.Human</class>
+		<class>blood.steel.server.model.character.Orc</class>
+		<class>blood.steel.server.model.fight.FightLog</class>
+		<class>blood.steel.server.model.fight.messaging.FightMessage</class>
+		<class>blood.steel.server.model.fight.messaging.AttackMessage</class>
+		<class>blood.steel.server.model.fight.messaging.FightEventMessage</class>
+		<class>blood.steel.server.model.fight.messaging.FightStateMessage</class>
+		<class>blood.steel.server.model.character.Inventory</class>
+		<class>blood.steel.server.model.items.Item</class>
+		<class>blood.steel.server.model.items.weapons.Weapon</class>
+		<class>blood.steel.server.model.items.weapons.Shield</class>
+		<class>blood.steel.server.model.items.weapons.Helmet</class>
+		<class>blood.steel.server.model.items.weapons.Mail</class>
+		<class>blood.steel.server.model.items.weapons.Belt</class>
+		<class>blood.steel.server.model.items.weapons.Boots</class>
+		<class>blood.steel.server.model.items.weapons.Weaponry</class>
+		<class>blood.steel.server.model.character.Equipment</class>
+		<properties>
+	      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+	      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bloodandsteel" />
+	      <property name="javax.persistence.jdbc.user" value="root" />
+	      <property name="javax.persistence.jdbc.password" value="porcelainbus" />
+	      <property name="eclipselink.ddl-generation" value="create-tables" />
+	      <property name="eclipselink.ddl-generation.output-mode" value="database" />
+	      <property name="eclipselink.allow-zero-id" value="true" />
+	    </properties>
+	</persistence-unit>
+</persistence>
